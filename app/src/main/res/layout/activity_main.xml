@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="50px"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/amount"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/amountNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter the Total Amount Spent in $ (eg. 50)"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/pax"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pax"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/paxNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter the Total Number of People (eg. 3)"
+        android:inputType="number" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:id="@+id/svc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="false"
+            android:textOff="No Service Charge"
+            android:textOn="10% Service Charge" />
+
+        <ToggleButton
+            android:id="@+id/gst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="No GST"
+            android:textOn="7% GST" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/discount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/discount"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/discountNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter Discount Here in % (if any) (eg. 10)"
+        android:inputType="number" />
+
+
+    <TextView
+        android:id="@+id/payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/payment"
+        android:textSize="24sp" />
+
+    <RadioGroup
+        android:id="@+id/paymentMethod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/cash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="@string/cash" />
+
+        <RadioButton
+            android:id="@+id/paynow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/paynow" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/calculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/calculate"
+            android:layout_weight="1"
+            android:layout_marginRight = "5dp"/>
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/reset" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginVertical="10px"
+        android:background="@color/black" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/total"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/gstView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/gstView" />
+
+    <TextView
+        android:id="@+id/svcView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/svcView" />
+
+    <TextView
+        android:id="@+id/perPerson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/perPerson"
+        android:textSize="24sp" />
+
+</LinearLayout>

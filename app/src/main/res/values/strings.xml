@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Bill Please</string>
+    <string name="amount">Amount</string>
+    <string name="pax">No. of Pax</string>
+    <string name="discount">Discount (%)</string>
+    <string name="payment">Payment Method</string>
+    <string name="cash">Cash</string>
+    <string name="paynow">PayNow</string>
+    <string name="total">Total Bill: </string>
+    <string name="calculate">Calculate</string>
+    <string name="reset">Reset</string>
+    <string name ="perPerson">Each Person Pays: </string>
+    <string name ="gstView">GST: </string>
+    <string name ="svcView">Service Charge: </string>
+</resources>
