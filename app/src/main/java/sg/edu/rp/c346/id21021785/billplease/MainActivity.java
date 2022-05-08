@@ -79,9 +79,28 @@ public class MainActivity extends AppCompatActivity {
         calculate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                double newAmount = Double.parseDouble(amount.getText().toString());
-                int newPax = Integer.parseInt(pax.getText().toString());
-                double newDiscount = Double.parseDouble(discount.getText().toString());
+                double newAmount = 0.0;
+                if (amount.getText() != null) {
+                    newAmount = Double.parseDouble(amount.getText().toString());
+                } else {
+                    newAmount = Double.parseDouble(amount.getTag().toString());
+                }
+
+                int newPax = 0;
+                if (pax.getText() != null) {
+                    newPax = Integer.parseInt(pax.getText().toString());
+                } else {
+                    newPax = Integer.parseInt(pax.getTag().toString());
+                }
+
+
+                double newDiscount = 0.0;
+                if (discount.getText() != null) {
+                    newDiscount = Double.parseDouble(discount.getText().toString());
+                } else {
+                    newDiscount = Double.parseDouble(discount.getTag().toString());
+                }
+
                 double newTotal = 0.0;
                 double newSvc = Double.parseDouble(svc.getTag().toString());
                 System.out.println(gst.getTag());
@@ -98,16 +117,16 @@ public class MainActivity extends AppCompatActivity {
                     payTo.setText("");
                 }
 
-                if (newAmount != 0.0 || newPax != 0 ) {
+                if (newAmount != 0.0 || newPax != 0 || newDiscount != 0.0 ) {
                     newTotal = ((newAmount + (newGst * newAmount) + (newSvc * newAmount)) * (100 - newDiscount)/100);
                 } else {
                     newTotal = 0;
                 }
 
                 total.setText(String.format("Total: $%.2f", newTotal));
-                gstAmt.setText(String.format("GST: $%.2f", newGst));
-                svcAmt.setText(String.format("Service Charge: $%.2f", newSvc));
-                split.setText(String.format("Each Person Pays: $%.2f", (newAmount/newPax)));
+                gstAmt.setText(String.format("GST: $%.2f", (newGst * newAmount)));
+                svcAmt.setText(String.format("Service Charge: $%.2f", (newSvc * newAmount)));
+                split.setText(String.format("Each Person Pays: $%.2f", (newTotal/newPax)));
             }
         });
 
