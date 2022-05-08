@@ -21,7 +21,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Enter the Total Amount Spent in $ (eg. 50)"
-        android:inputType="number" />
+        android:inputType="number"
+        android:tag="0.0" />
 
     <TextView
         android:id="@+id/pax"
@@ -36,7 +37,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Enter the Total Number of People (eg. 3)"
-        android:inputType="number" />
+        android:inputType="number"
+        android:tag="0" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -57,6 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:checked="true"
             android:textOff="No GST"
             android:textOn="7% GST" />
     </LinearLayout>
@@ -72,9 +75,11 @@
         android:id="@+id/discountNo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:autoText="false"
         android:ems="10"
         android:hint="Enter Discount Here in % (if any) (eg. 10)"
-        android:inputType="number" />
+        android:inputType="number"
+        android:tag="0.0" />
 
 
     <TextView
@@ -98,7 +103,7 @@
             android:text="@string/cash" />
 
         <RadioButton
-            android:id="@+id/paynow"
+            android:id="@+id/payNow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/paynow" />
@@ -157,5 +162,11 @@
         android:layout_height="wrap_content"
         android:text="@string/perPerson"
         android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/payTo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp" />
 
 </LinearLayout>
