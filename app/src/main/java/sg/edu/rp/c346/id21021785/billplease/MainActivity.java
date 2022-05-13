@@ -80,14 +80,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 double newAmount = 0.0;
-                if (amount.getText() != null) {
+                if (!amount.getText().toString().isEmpty()) {
                     newAmount = Double.parseDouble(amount.getText().toString());
                 } else {
                     newAmount = Double.parseDouble(amount.getTag().toString());
                 }
 
                 int newPax = 0;
-                if (pax.getText() != null) {
+                if (!pax.getText().toString().isEmpty()) {
                     newPax = Integer.parseInt(pax.getText().toString());
                 } else {
                     newPax = Integer.parseInt(pax.getTag().toString());
@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 double newDiscount = 0.0;
-                if (discount.getText() != null) {
+                if (!discount.getText().toString().isEmpty()) {
                     newDiscount = Double.parseDouble(discount.getText().toString());
                 } else {
                     newDiscount = Double.parseDouble(discount.getTag().toString());
